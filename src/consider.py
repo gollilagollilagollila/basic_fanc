@@ -11,16 +11,16 @@ Threshold = 0.6    # 認識結果の閾値
 # <---------------------
 
 
-question_list = [   "which city are we in",\
-                    "what is the name of your team",\
-                    "what is the highest mountain in Japan",\
-                    "what's your team's home city",\
-                    "who created Star Wars",\
-                    "who lives in a pineapple under the sea",\
-                    "do you think robots are a threat to humanity",\
-                    "who created the Python Programming Language",\
-                    "who created the C Programming Language",\
-                    "what is a chatbot"]
+question_list = [   "Which city are we in?",\
+                    "What is the name of your team?",\
+                    "What is the highest mountain in Japan?",\
+                    "What's your team's home city?",\
+                    "Who created Star Wars?",\
+                    "Who lives in a pineapple under the sea?",\
+                    "Do you think robots are a threat to humanity?",\
+                    "Who created the Python Programming Language?",\
+                    "Who created the C Programming Language?",\
+                    "What is a chatbot?"]
 
 answer_list = [     "Kanazawa",\
                     "KIT Happy Robot",\
@@ -54,6 +54,9 @@ class distance(object):
 
 
         if result_final <= Threshold:
+            self.speak("Question is")
+            self.speak(self.question[list_num])
+            self.speak("Answer is")
             self.speak(self.answer[list_num])
             return True
         else:
